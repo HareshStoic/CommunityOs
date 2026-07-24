@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:communityos/pages/home_page.dart';
+import 'package:communityos/animation/ripple_route.dart';
+
 // import 'package:communityos/apiService/api_service.dart';
 
 class OtpverificationPage extends StatefulWidget {
@@ -176,10 +178,10 @@ class _OtpverificationPageState extends State<OtpverificationPage> {
                               onPressed: () {
                                 Navigator.pushReplacement(
                                   context,
-                                  MaterialPageRoute(
-                                    builder: (context) => HomePage(
+                                  RippleRoute(
+                                      page: const HomePage()
+                                    // builder: (context) => HomePage(),
                                       // phoneNumber: _phoneController.text.trim(),
-                                    ),
                                   ),
                                 );
                               },
