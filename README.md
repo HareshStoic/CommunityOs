@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 🏘️ communityos
 
 A New Flutter project.
@@ -246,3 +247,7 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 >>>>>>> 8610f3e (Your message)
+=======
+# CommunityOs
+🏘️ A Flutter-based apartment community management app with amenity booking, vehicle management, notices, and analytics dashboards.
+>>>>>>> bb908167306cc43cd350ed8dc6296128b5bd357b
