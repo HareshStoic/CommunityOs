@@ -218,6 +218,42 @@ class _AmenityBookingDetailPageState extends State<AmenityBookingDetailPage> {
                 ),
 
                 const SizedBox(height: 24),
+                Text("Guests",
+                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: theme.textTheme.bodyLarge?.color)),
+                const SizedBox(height: 12),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                  decoration: BoxDecoration(
+                    color: theme.cardColor,
+                    borderRadius: BorderRadius.circular(14),
+                    boxShadow: [
+                      BoxShadow(color: Colors.black.withValues(alpha: 0.04), blurRadius: 8, offset: const Offset(0, 3)),
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Text("Number of people",
+                            style: TextStyle(fontSize: 13, color: theme.textTheme.bodyLarge?.color)),
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.remove_circle_outline),
+                        color: primaryPurple,
+                        onPressed: _guests > 1 ? () => setState(() => _guests--) : null,
+                      ),
+                      Text("$_guests",
+                          style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: theme.textTheme.bodyLarge?.color)),
+                      IconButton(
+                        icon: const Icon(Icons.add_circle_outline),
+                        color: primaryPurple,
+                        onPressed: _guests < 10 ? () => setState(() => _guests++) : null,
+                      ),
+                    ],
+                  ),
+                ),
+
+
+                const SizedBox(height: 24),
                 Text("Select Time Slot",
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: theme.textTheme.bodyLarge?.color)),
                 const SizedBox(height: 12),
@@ -270,40 +306,6 @@ class _AmenityBookingDetailPageState extends State<AmenityBookingDetailPage> {
                   },
                 ),
 
-                const SizedBox(height: 24),
-                Text("Guests",
-                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: theme.textTheme.bodyLarge?.color)),
-                const SizedBox(height: 12),
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-                  decoration: BoxDecoration(
-                    color: theme.cardColor,
-                    borderRadius: BorderRadius.circular(14),
-                    boxShadow: [
-                      BoxShadow(color: Colors.black.withValues(alpha: 0.04), blurRadius: 8, offset: const Offset(0, 3)),
-                    ],
-                  ),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Text("Number of people",
-                            style: TextStyle(fontSize: 13, color: theme.textTheme.bodyLarge?.color)),
-                      ),
-                      IconButton(
-                        icon: const Icon(Icons.remove_circle_outline),
-                        color: primaryPurple,
-                        onPressed: _guests > 1 ? () => setState(() => _guests--) : null,
-                      ),
-                      Text("$_guests",
-                          style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: theme.textTheme.bodyLarge?.color)),
-                      IconButton(
-                        icon: const Icon(Icons.add_circle_outline),
-                        color: primaryPurple,
-                        onPressed: _guests < 10 ? () => setState(() => _guests++) : null,
-                      ),
-                    ],
-                  ),
-                ),
                 const SizedBox(height: 12),
               ],
             ),
