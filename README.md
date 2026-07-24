@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# 🏘️ communityos
+# 🏘️ CommunityOs
 
 A New Flutter project.
 
